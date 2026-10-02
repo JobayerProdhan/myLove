@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy Birthday, My Love 🎂</title>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="fx"></canvas>
+<div id="floaters"></div>
+<nav aria-label="Sections">
+  <a href="#gift" title="Gift">🎁</a><a href="#cake" title="Cake">🎂</a><a href="#game" title="Game">🎈</a>
+  <a href="#ask" title="Question">💘</a><a href="#reasons" title="Reasons">😂</a><a href="#coupons" title="Coupons">🎟️</a>
+  <a href="#wheel-s" title="Wheel">🎡</a><a href="#letter" title="Letter">💌</a>
+</nav>
+
+<header>
+  <div class="hero">
+    <small>Today is a very important day…</small>
+    <h1 id="title" aria-label="Happy Birthday"></h1>
+    <p id="typed" aria-live="polite"></p>
+    <button class="pink" id="start">Start your surprise 🎉</button>
+    <p class="nameEdit">Not your name? <button id="rename">Change name</button></p>
+  </div>
+</header>
+
+<main>
+<section id="gift">
+  <h2>Your gift is here!</h2>
+  <p class="sub">Tap the box. It has been shaking since morning.</p>
+  <button class="gift" id="giftBtn" aria-label="Open gift">🎁</button>
+  <p id="giftMsg"></p>
+</section>
+
+<section id="cake">
+  <h2>Make a wish, then blow</h2>
+  <p class="sub">Tap each candle to blow it out. (Wish for snacks. I won't tell.)</p>
+  <div class="cake" aria-hidden="false">
+    <div class="candles" id="candles"></div>
+    <div class="tier t1"></div><div class="tier t2"></div>
+  </div>
+  <p id="cakeMsg"></p>
+  <button id="relight">Light them again 🔥</button>
+</section>
+
+<section id="game">
+  <h2>Balloon Pop Party</h2>
+  <p class="sub">Pop as many as you can in 20 seconds. The 💩 balloons cost you points. Sorry, life is unfair.</p>
+  <div class="hud"><span>Score: <b id="score">0</b></span><span>Time: <b id="time">20</b></span><span>Best: <b id="best">0</b></span></div>
+  <div id="arena"><div id="arenaMsg">Press play to start</div></div>
+  <p style="margin-top:1rem"><button class="pink" id="play">Play 🎈</button></p>
+</section>
+
+<section id="ask">
+  <h2>One serious question</h2>
+  <p class="sub">Answer carefully. Your husband is watching.</p>
+  <div class="card" id="qBox">
+    <h3 style="font-size:1.8rem">Do you love me?</h3>
+    <div class="q-btns"><button class="pink" id="yes">Yes 💖</button><button id="no">No</button></div>
+    <p id="qMsg"></p>
+  </div>
+</section>
+
+<section id="meter-s">
+  <h2>Love-o-Meter 3000</h2>
+  <p class="sub">Press and hold to measure how much I love you.</p>
+  <div class="meter"><div id="fill"></div></div>
+  <button class="pink" id="hold">Hold me ❤️</button>
+  <p id="meterTxt"></p>
+</section>
+
+<section id="reasons">
+  <h2>Reasons you're stuck with me</h2>
+  <p class="sub">Totally scientific. Tap for a new one.</p>
+  <div class="card"><div id="reason">Tap the button…</div><button id="newReason">Give me a reason 😂</button></div>
+</section>
+
+<section id="coupons">
+  <h2>Birthday coupons</h2>
+  <p class="sub">Tap a coupon to reveal it. Valid forever. No refunds, only hugs.</p>
+  <div class="coupons" id="couponGrid"></div>
+</section>
+
+<section id="wheel-s">
+  <h2>Wheel of Destiny</h2>
+  <p class="sub">Spin to decide how we celebrate tonight.</p>
+  <div id="wheelWrap"><div id="pointer">🔻</div><canvas id="wheel" width="600" height="600"></canvas></div>
+  <button class="pink" id="spin">Spin! 🎡</button>
+  <p id="wheelMsg" style="margin-top:1rem;font-size:1.3rem;min-height:2rem"></p>
+</section>
+
+<section id="letter">
+  <h2>One last thing…</h2>
+  <p class="sub">Tap the envelope.</p>
+  <button class="gift" id="env" style="font-size:5rem" aria-label="Open letter">💌</button>
+  <div class="letter pop" id="letterBox" hidden>
+    <h3 id="lh"></h3>
+    <p>Thank you for every laugh, every late-night snack you "didn't want" but ate half of, and for making our home feel like home.</p><br>
+    <p>You are my favorite person to annoy, my best partner in crime and the reason I check my phone for your messages first.</p><br>
+    <p>I hope this year gives you everything you deserve: peace, health, adventures, and a lot of cake. I'll be right next to you, stealing the frosting.</p><br>
+    <p><b>Happy Birthday. I love you more than the last slice of cake. 🍰</b></p><br>
+    <p>Forever yours,<br>Your favorite human ❤️</p>
+  </div>
+</section>
+</main>
+<footer>Made with 💖 just for you. Tap anywhere for a little confetti.</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
